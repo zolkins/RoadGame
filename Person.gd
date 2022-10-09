@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 1000
+export (int) var speed = 400
 
 var velocity = Vector2()
 
@@ -19,3 +19,5 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+# Если столкновение с автобусом, убрать видимость
+
