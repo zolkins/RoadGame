@@ -1,15 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://bus.gd" type="Script" id=1]
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMapRoad.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Textures/Skameyka.png" type="Texture" id=5]
 [ext_resource path="res://Textures/Musor.png" type="Texture" id=6]
 [ext_resource path="res://Textures/Luzha.png" type="Texture" id=7]
-[ext_resource path="res://Textures/Autobus.png" type="Texture" id=8]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 171.5, 42 )
+[ext_resource path="res://bus.tscn" type="PackedScene" id=10]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1, 1 )
@@ -31,22 +27,9 @@ texture = ExtResource( 7 )
 position = Vector2( 1196, 628 )
 texture = ExtResource( 6 )
 
-[node name="Body" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1015, 648 )
-
-[node name="bus" type="KinematicBody2D" parent="."]
-position = Vector2( 387, 33 )
+[node name="bus" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1522, 40 )
 scale = Vector2( 0.239688, 0.233871 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bus"]
-position = Vector2( 6.25818, 55.5862 )
-scale = Vector2( 4.17209, 4.27586 )
-shape = SubResource( 1 )
-
-[node name="Autobus" type="Sprite" parent="bus"]
-position = Vector2( 4.17212, 0 )
-texture = ExtResource( 8 )
+[node name="body" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1047, 634 )

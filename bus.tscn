@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Textures/Autobus.png" type="Texture" id=2]
+[ext_resource path="res://bus.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 904.063, 221.938 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bus" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -4.76837e-07 )
+scale = Vector2( 0.239688, 0.233871 )
+script = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="bus"]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bus/Area2D"]
+position = Vector2( 0, 217.534 )
+scale = Vector2( 4.17209, 4.27586 )
+shape = SubResource( 1 )
+
+[node name="Autobus" type="Sprite" parent="bus"]
+scale = Vector2( 5.20452, 4.75386 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bus"]
+position = Vector2( 0, 132.819 )
+scale = Vector2( 4.17209, 4.27586 )
+shape = SubResource( 1 )
