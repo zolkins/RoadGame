@@ -1,9 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://RoadTile.tscn" type="PackedScene" id=1]
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMapRoad.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Textures/Road2.png" type="Texture" id=4]
 [ext_resource path="res://Textures/Skameyka.png" type="Texture" id=5]
 [ext_resource path="res://Textures/Musor.png" type="Texture" id=6]
 [ext_resource path="res://Textures/Luzha.png" type="Texture" id=7]
@@ -11,16 +9,6 @@
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1, 1 )
-
-[node name="Node2D5" parent="." instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 472, 206 )
-scale = Vector2( 18, 11 )
-
-[node name="Road2" type="Sprite" parent="."]
-visible = false
-position = Vector2( 169, 402 )
-texture = ExtResource( 4 )
 
 [node name="TileMap2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -2, -56 )
@@ -31,18 +19,18 @@ position = Vector2( 571, 542 )
 scale = Vector2( 1.85938, 1.28906 )
 texture = ExtResource( 5 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 565, 503 )
-
 [node name="Luzha" type="Sprite" parent="."]
 position = Vector2( 224, 365 )
 texture = ExtResource( 7 )
 
 [node name="Musor" type="Sprite" parent="."]
-position = Vector2( 858, 104 )
+position = Vector2( 859, 105 )
 texture = ExtResource( 6 )
 
+[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 565, 503 )
+
 [node name="Autobus" type="Sprite" parent="."]
-position = Vector2( 442, 70 )
+position = Vector2( 448, 70 )
 scale = Vector2( 0.239688, 0.233871 )
 texture = ExtResource( 8 )
