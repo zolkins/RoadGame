@@ -19,8 +19,7 @@ func move():
 		velocity.y -= 1
 	if velocity.length() == 0:
 		_animated_sprite.play("idle")
-	else:
-		velocity = velocity.normalized() * speed
+	velocity = velocity.normalized() * speed
 	move_and_slide(velocity)
 
 func _process(_delta):

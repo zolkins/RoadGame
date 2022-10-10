@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 800
+export (int) var speed = 350
 
 var velocity = Vector2()
 
@@ -15,9 +15,10 @@ var i = 0
 # Начало движения
 func move():
 	velocity.x = -speed
+	print(position.x)
 
 func _physics_process(delta):
-	if position.x >= -4331.0:
+	if position.x >= 400:
 		move()
 	else:
 		_on_Bus_stop()
@@ -41,5 +42,4 @@ func _on_Bus_start():
 #		_animated_sprite.play("run")
 #	else:
 #		_animated_sprite.stop()
-
 

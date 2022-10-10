@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://train.tscn" type="PackedScene" id=1]
 [ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMapRoad.tscn" type="PackedScene" id=3]
+[ext_resource path="res://bus.gd" type="Script" id=4]
 [ext_resource path="res://Textures/Skameyka.png" type="Texture" id=5]
 [ext_resource path="res://Textures/Musor.png" type="Texture" id=6]
 [ext_resource path="res://Textures/Luzha.png" type="Texture" id=7]
-[ext_resource path="res://bus.tscn" type="PackedScene" id=10]
+[ext_resource path="res://bus_1.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1, 1 )
@@ -16,20 +18,29 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 
 [node name="Skameyka" type="Sprite" parent="."]
 position = Vector2( 1019, 656 )
-scale = Vector2( 1.85938, 1.28906 )
+scale = Vector2( 0.905293, 0.627616 )
 texture = ExtResource( 5 )
 
 [node name="Luzha" type="Sprite" parent="."]
 position = Vector2( 747, 644 )
+scale = Vector2( 0.308042, 0.308042 )
 texture = ExtResource( 7 )
 
 [node name="Musor" type="Sprite" parent="."]
 position = Vector2( 1196, 628 )
+scale = Vector2( 0.365714, 0.365714 )
 texture = ExtResource( 6 )
 
-[node name="bus" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1522, 40 )
-scale = Vector2( 0.239688, 0.233871 )
+[node name="bus" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1395, 51 )
+rotation = 3.14159
+scale = Vector2( 0.135408, -0.135408 )
+script = ExtResource( 4 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1309, 134 )
+rotation = 3.14159
+scale = Vector2( 1.74435, -1.74435 )
 
 [node name="body" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1047, 634 )
