@@ -16,6 +16,7 @@ func move():
 	if Input.is_action_pressed("down"):
 		velocity.y += 1
 	if Input.is_action_pressed("up"):
+		_animated_sprite.play("walk_up")
 		velocity.y -= 1
 	if velocity.length() == 0:
 		_animated_sprite.play("idle")
