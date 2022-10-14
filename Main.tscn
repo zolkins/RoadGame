@@ -31,16 +31,20 @@ position = Vector2( 1196, 628 )
 scale = Vector2( 0.365714, 0.365714 )
 texture = ExtResource( 6 )
 
-[node name="bus" parent="." instance=ExtResource( 8 )]
+[node name="YSort" type="YSort" parent="."]
+
+[node name="body" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 1047, 634 )
+
+[node name="bus" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1395, 51 )
 rotation = 3.14159
 scale = Vector2( 0.135408, -0.135408 )
 script = ExtResource( 4 )
 
-[node name="train" parent="." instance=ExtResource( 1 )]
+[node name="barriers" type="YSort" parent="YSort"]
+
+[node name="train" parent="YSort/barriers" instance=ExtResource( 1 )]
 position = Vector2( 1309, 131 )
 rotation = 3.14159
 scale = Vector2( 1.751, -1.83 )
-
-[node name="body" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1047, 634 )
