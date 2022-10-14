@@ -15,7 +15,7 @@ var i = 0
 # Начало движения
 func move():
 	velocity.x = -speed
-	print(position.x)
+#	print(position.x)
 
 func _physics_process(delta):
 	if position.x >= 400:

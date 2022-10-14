@@ -37,10 +37,10 @@ rotation = 3.14159
 scale = Vector2( 0.135408, -0.135408 )
 script = ExtResource( 4 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1309, 134 )
+[node name="train" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1309, 131 )
 rotation = 3.14159
-scale = Vector2( 1.74435, -1.74435 )
+scale = Vector2( 1.751, -1.83 )
 
 [node name="body" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1047, 634 )

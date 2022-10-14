@@ -1,15 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/truck-constructor-pixel-art/1 Bodies/13.png" type="Texture" id=1]
 [ext_resource path="res://assets/truck-constructor-pixel-art/1 Bodies/7.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 204, 26.5 )
-
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 17.0
-
-[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 219, 13.5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
@@ -28,13 +23,5 @@ position = Vector2( 150, 5.50001 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -43, 6 )
+position = Vector2( -29, 20.5 )
 shape = SubResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 167, 6 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2( 176, 21 )
-shape = SubResource( 3 )
