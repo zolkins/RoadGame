@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/truck-constructor-pixel-art/1 Bodies/7.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 219, 13.5 )
+extents = Vector2( 219, 15 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
@@ -23,5 +23,5 @@ position = Vector2( 150, 5.50001 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2( -29, 20.5 )
+position = Vector2( -29, 19 )
 shape = SubResource( 1 )

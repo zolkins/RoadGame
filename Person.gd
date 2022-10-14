@@ -8,8 +8,8 @@ var velocity = Vector2()
 # Ходьба
 func move():
 	# Запретить нажатие более одной клавиши однавременно
-	if Input.is_action_pressed("right") and Input.is_action_pressed("up") or Input.is_action_pressed("right") and Input.is_action_pressed("down") or Input.is_action_pressed("left") and Input.is_action_pressed("up") or Input.is_action_pressed("left") and Input.is_action_pressed("down"):
-		return
+#	if Input.is_action_pressed("right") and Input.is_action_pressed("up") or Input.is_action_pressed("right") and Input.is_action_pressed("down") or Input.is_action_pressed("left") and Input.is_action_pressed("up") or Input.is_action_pressed("left") and Input.is_action_pressed("down"):
+#		return
 	velocity = Vector2()
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
