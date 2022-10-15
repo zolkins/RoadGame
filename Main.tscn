@@ -5,7 +5,7 @@
 [ext_resource path="res://TileMapRoad.tscn" type="PackedScene" id=3]
 [ext_resource path="res://bus.gd" type="Script" id=4]
 [ext_resource path="res://lavochka.png" type="Texture" id=5]
-[ext_resource path="res://train.gd" type="Script" id=6]
+[ext_resource path="res://BusStop.tscn" type="PackedScene" id=6]
 [ext_resource path="res://bus_1.tscn" type="PackedScene" id=8]
 [ext_resource path="res://car_green.tscn" type="PackedScene" id=9]
 
@@ -33,23 +33,28 @@ flip_h = true
 position = Vector2( 125, 40 )
 shape = SubResource( 1 )
 
+[node name="Area2D2" parent="StaticBody2D" instance=ExtResource( 6 )]
+position = Vector2( 2293.33, -940 )
+rotation = 1.5708
+
 [node name="YSort" type="YSort" parent="."]
 
 [node name="body" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 705, 639 )
 
 [node name="bus" parent="YSort" instance=ExtResource( 8 )]
-position = Vector2( 1201, 55 )
+position = Vector2( 1553, 47 )
 scale = Vector2( 0.048, 0.048 )
 script = ExtResource( 4 )
 
 [node name="barriers" type="YSort" parent="YSort"]
 
 [node name="car_green" parent="YSort/barriers" instance=ExtResource( 9 )]
-position = Vector2( 1241, 423 )
+position = Vector2( 1233, 399 )
 
 [node name="train" parent="YSort/barriers" instance=ExtResource( 1 )]
-position = Vector2( 1309, 131 )
+position = Vector2( 1721, 135 )
 rotation = 3.14159
 scale = Vector2( 1.751, -1.83 )
-script = ExtResource( 6 )
+
+[connection signal="area_entered" from="StaticBody2D/Area2D2" to="YSort/bus" method="_on_Area2D2_area_entered"]

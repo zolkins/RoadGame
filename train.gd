@@ -1,45 +1,26 @@
 extends KinematicBody2D
 
-export (int) var speed = 500
-
+export (int) var speed = 900
 var velocity = Vector2()
 
 # Автобус двигается до координаты x
 var i = 0
 
-#func _ready():
+# Запуск таймера
+func _ready():
 	# Начальная позиция автобуса
-	#position = Vector2(1522, 40)
-	#pass
+	position = Vector2(1721, 135)
+	$Timer.start(rand_range(1, 5))
 
 # Начало движения
 func move():
+	if position.x <= -447:
+		$Timer.start(rand_range(1, 10))
+		position = Vector2(1721, 135)
 	velocity.x = -speed
-#	print(position.x)
 
 func _physics_process(delta):
-	if position.x >= 400:
-		move()
-	else:
-		move()
 	position += velocity * delta
 
-
-func _on_Bus_stop():
-	# Остановка автобуса
-	velocity.x = 0
-	pass
-
-func _on_Bus_start():
-	# Запуск автобуса
-	velocity.x = speed
-	pass
-
-## Анимация
-#onready var _animated_sprite = $AnimatedSprite
-#func _process(_delta):
-#	if velocity.length() != 0:
-#		_animated_sprite.play("run")
-#	else:
-#		_animated_sprite.stop()
-
+func _on_Timer_timeout():
+	move()
