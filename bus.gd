@@ -6,10 +6,11 @@ var velocity = Vector2()
 
 # Автобус двигается до координаты x
 var i = 0
-
-#func _ready():
-	# Начальная позиция автобуса
-	#position = Vector2(1522, 40)
+var stop
+func _ready():
+	randomize()
+	stop = rand_range(177, 1169)
+	position = Vector2(1522, 63)
 	#pass
 
 # Начало движения
@@ -18,7 +19,17 @@ func move():
 #	print(position.x)
 
 func _physics_process(delta):
+	if position.x >= stop:
+		move()
+	else:
+		_on_Bus_stop()
 	position += velocity * delta
+
+
+func _on_Bus_stop():
+	# Остановка автобуса
+	velocity.x = 0
+	pass
 
 func _on_Bus_start():
 	# Запуск автобуса
@@ -33,6 +44,3 @@ func _on_Bus_start():
 #	else:
 #		_animated_sprite.stop()
 
-func _on_Area2D2_area_entered(area):
-	velocity.x = 0
-	pass # Replace with function body.
