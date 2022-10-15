@@ -1,8 +1,7 @@
 extends KinematicBody2D
 
-export (int) var speed = 300
+export (int) var speed = 200
 onready var _animated_sprite = $animated_sprite
-onready var col_right = $right
 var velocity = Vector2()
 
 # Ходьба
@@ -15,10 +14,7 @@ func move():
 		velocity.x += 1
 		_animated_sprite.play("walk_right")
 	if Input.is_action_pressed("left"):
-		# Меняем положение коллизии при движении влево
-		col_right.position.x = -6.768
-		_animated_sprite.flip_h = true
-		_animated_sprite.play("walk_right")
+		_animated_sprite.play("walk_left")
 		velocity.x -= 1
 	if Input.is_action_pressed("down"):
 		_animated_sprite.play("walk_down")
@@ -32,6 +28,5 @@ func move():
 	move_and_slide(velocity)
 
 func _process(_delta):
-	col_right.position.x = 7.237
 	_animated_sprite.flip_h = false
 	move()
