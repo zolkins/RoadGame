@@ -23,7 +23,7 @@ extents = Vector2( 3622.5, 440.781 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 1180.25, 495 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="bus" type="KinematicBody2D"]
 scale = Vector2( 0.274028, 0.274028 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -37,8 +37,8 @@ playing = true
 position = Vector2( -7, 398.781 )
 shape = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="door" type="Area2D" parent="."]
 
-[node name="door" type="CollisionShape2D" parent="Area2D"]
+[node name="door" type="CollisionShape2D" parent="door"]
 position = Vector2( -2457.25, 856 )
 shape = SubResource( 3 )

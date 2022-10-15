@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Person.gd" type="Script" id=1]
 [ext_resource path="res://assets/Character without weapon/walk/walk left1.png" type="Texture" id=2]
@@ -21,9 +21,18 @@
 [ext_resource path="res://assets/Character without weapon/idle/idle down2.png" type="Texture" id=19]
 [ext_resource path="res://assets/Character without weapon/idle/idle down1.png" type="Texture" id=20]
 [ext_resource path="res://assets/Character without weapon/idle/idle down4.png" type="Texture" id=21]
+[ext_resource path="res://assets/Character without weapon/death animation/death3.png" type="Texture" id=22]
+[ext_resource path="res://assets/Character without weapon/death animation/death2.png" type="Texture" id=23]
+[ext_resource path="res://assets/Character without weapon/death animation/death4.png" type="Texture" id=24]
+[ext_resource path="res://assets/Character without weapon/death animation/death1.png" type="Texture" id=25]
 
 [sub_resource type="SpriteFrames" id=59]
 animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "idle",
@@ -61,10 +70,10 @@ script = ExtResource( 1 )
 position = Vector2( 6.76785, 40.6071 )
 scale = Vector2( 3.47936, 4.65538 )
 frames = SubResource( 59 )
-animation = "idle"
-frame = 2
+animation = "dead"
+frame = 3
 playing = true
 
 [node name="right" type="CollisionShape2D" parent="."]
-position = Vector2( 7.23749, 54.1428 )
+position = Vector2( 8.12142, 55.4964 )
 shape = SubResource( 48 )
