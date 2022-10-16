@@ -3,16 +3,13 @@ extends KinematicBody2D
 export (int) var speed = 200
 onready var _animated_sprite = $animated_sprite
 var velocity = Vector2()
-var dead = false
+
 
 # Ходьба
 func move():
 	# Запретить нажатие более одной клавиши однавременно
 #	if Input.is_action_pressed("right") and Input.is_action_pressed("up") or Input.is_action_pressed("right") and Input.is_action_pressed("down") or Input.is_action_pressed("left") and Input.is_action_pressed("up") or Input.is_action_pressed("left") and Input.is_action_pressed("down"):
 #		return
-	
-	if dead:
-		_animated_sprite.play("dead")
 	velocity = Vector2()
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
@@ -32,5 +29,8 @@ func move():
 	move_and_slide(velocity)
 
 func _process(_delta):
+	if Global.death:
+		_animated_sprite.play("dead")
+		return
 	move()
 

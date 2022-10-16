@@ -13,6 +13,10 @@ config_version=4
 config/name="RoadGame"
 run/main_scene="res://Scenes/Main.tscn"
 
+[autoload]
+
+Global="*res://Scenes/Global/Global.tscn"
+
 [display]
 
 window/size/width=1280

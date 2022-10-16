@@ -11,7 +11,6 @@ func _ready():
 	randomize()
 	stop = rand_range(177, 1100)
 	position = Vector2(1522, 63)
-	#pass
 
 # Начало движения
 func move():
@@ -44,3 +43,8 @@ func _on_Bus_start():
 #	else:
 #		_animated_sprite.stop()
 
+#    if body is Player:
+#        $Timer.stop()
+#        velocity = Vector2()
+#        $AnimationPlayer.play("stop")
+#        $AnimationPlayer.connect("animation_finished", self, "move")
