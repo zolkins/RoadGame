@@ -1,6 +1,5 @@
 extends Node2D
 
-
 onready var death = false
 onready var person = "res://Scenes/KinematicBody2D.tscn"
 onready var score = 0
