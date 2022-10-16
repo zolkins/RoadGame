@@ -10,7 +10,7 @@ extents = Vector2( 281, 43.5 )
 extents = Vector2( 279.5, 46 )
 
 [node name="car_f" type="KinematicBody2D"]
-scale = Vector2( 0.799455, 0.799455 )
+scale = Vector2( 0.112256, 0.112256 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

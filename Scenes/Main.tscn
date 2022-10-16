@@ -54,12 +54,13 @@ position = Vector2( 705, 627 )
 
 [node name="bus" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1553, 63 )
-scale = Vector2( 0.048, 0.048 )
+scale = Vector2( 0.055, 0.055 )
 
 [node name="barriers" type="YSort" parent="YSort"]
 
 [node name="car_f" parent="YSort/barriers" instance=ExtResource( 10 )]
-position = Vector2( 881, 346 )
+position = Vector2( 861, 373 )
+scale = Vector2( 0.7, 0.7 )
 collision_layer = 4
 collision_mask = 8
 
