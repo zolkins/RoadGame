@@ -6,11 +6,12 @@ onready var score = $Control/Score.text
 
 
 func _ready():
-	$Control/Timer.start(1)
 	show_time()
 
 func _process(delta):
 	$Control/Score.text = "Score: " + str(Global.score)
+	if Global.lavochka:
+		$Control/Timer.start(1)
 
 func show_time() -> void:
 	var time_txt
