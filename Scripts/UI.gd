@@ -15,10 +15,10 @@ func show_time() -> void:
 	
 	$Control/ColorRect.modulate = Color(1, 1, 1, 1)
 	match time:
-		3: $Control/ColorRect.modulate = Color(1, 1, 0, 1) # jaune
-		2: $Control/ColorRect.modulate = Color(1, .75, 0, 1) # orange clair
-		1: $Control/ColorRect.modulate = Color(1, .50, 0, 1) # orange foncé
-		0: $Control/ColorRect.modulate = Color(1, .30, 0, 1)  # rouge
+		3: $Control/ColorRect.modulate = Color(1, 1, 0, 1)
+		2: $Control/ColorRect.modulate = Color(1, .75, 0, 1)
+		1: $Control/ColorRect.modulate = Color(1, .50, 0, 1)
+		0: $Control/ColorRect.modulate = Color(1, .30, 0, 1)
 
 	if time < 10:
 		time_txt = "Time: 0" + str(time)
