@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Textures/Road2.png" type="Texture" id=1]
-[ext_resource path="res://Textures/Road1.png" type="Texture" id=2]
-[ext_resource path="res://Textures/Textures.png" type="Texture" id=3]
+[ext_resource path="res://Used textures/Road2.png" type="Texture" id=1]
+[ext_resource path="res://Used textures/Road1.png" type="Texture" id=2]
+[ext_resource path="res://Used textures/Textures.png" type="Texture" id=3]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Road2.png 0"

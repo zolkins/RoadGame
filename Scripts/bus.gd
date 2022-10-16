@@ -53,3 +53,4 @@ func _on_Bus_start():
 func _on_door_body_entered(body):
 	if body.name == "body":
 		Global.score += 1
+		Global.hide = true

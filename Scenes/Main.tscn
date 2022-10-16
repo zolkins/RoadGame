@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/train.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TileMapRoad.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/bus.gd" type="Script" id=4]
-[ext_resource path="res://assets/lavochka.png" type="Texture" id=5]
+[ext_resource path="res://Used textures/lavochka.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/car_police.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/bus_1.tscn" type="PackedScene" id=8]
@@ -56,7 +55,6 @@ position = Vector2( 705, 627 )
 [node name="bus" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1553, 63 )
 scale = Vector2( 0.048, 0.048 )
-script = ExtResource( 4 )
 
 [node name="barriers" type="YSort" parent="YSort"]
 
