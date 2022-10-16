@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 var time:int = 10;
-
 onready var score = $Control/Score.text
 
 
