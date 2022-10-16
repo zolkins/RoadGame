@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/modern-city-assets/bus.png" type="Texture" id=1]
 [ext_resource path="res://assets/truck-constructor-pixel-art/1 Bodies/2_2.png" type="Texture" id=2]
 [ext_resource path="res://assets/truck-constructor-pixel-art/1 Bodies/2.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/bus.gd" type="Script" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -25,6 +26,7 @@ extents = Vector2( 1180.25, 495 )
 
 [node name="bus" type="KinematicBody2D"]
 scale = Vector2( 0.274028, 0.274028 )
+script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 6.10352e-05, 3.05176e-05 )
@@ -42,3 +44,5 @@ shape = SubResource( 2 )
 [node name="door" type="CollisionShape2D" parent="door"]
 position = Vector2( -2457.25, 856 )
 shape = SubResource( 3 )
+
+[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
