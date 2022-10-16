@@ -9,3 +9,4 @@ onready var lavochka:bool
 func _ready():
 	pass 
 
+
