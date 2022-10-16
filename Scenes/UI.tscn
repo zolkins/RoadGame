@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://Used textures/font/ThaleahFat.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/coat-of-arms.png" type="Texture" id=3]
+[ext_resource path="res://assets/ukraine.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -10,6 +12,9 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=2]
 size = 30
 outline_size = 5
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 2 )
 
 [node name="UI" type="CanvasLayer"]
@@ -44,5 +49,30 @@ custom_fonts/font = SubResource( 2 )
 text = "Score:"
 
 [node name="Timer" type="Timer" parent="Control"]
+
+[node name="Control2" type="Control" parent="."]
+margin_top = 625.0
+margin_right = 165.0
+margin_bottom = 705.0
+rect_scale = Vector2( 1.38199, 1.38199 )
+
+[node name="Ukraine" type="Sprite" parent="Control2"]
+position = Vector2( 44, 44 )
+scale = Vector2( 1.39063, 1.39063 )
+texture = ExtResource( 4 )
+
+[node name="Coat-of-arms" type="Sprite" parent="Control2"]
+position = Vector2( 46, 39 )
+scale = Vector2( 0.297197, 0.297197 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Control2"]
+margin_left = 4.0
+margin_right = 108.0
+margin_bottom = 15.0
+rect_scale = Vector2( 0.805248, 0.805248 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Made in Ukraine"
 
 [connection signal="timeout" from="Control/Timer" to="." method="_on_Timer_timeout"]

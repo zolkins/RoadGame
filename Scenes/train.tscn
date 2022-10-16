@@ -15,17 +15,17 @@ script = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="13" type="Sprite" parent="."]
+[node name="one" type="Sprite" parent="."]
 position = Vector2( -182.895, 10.0232 )
 texture = ExtResource( 1 )
 offset = Vector2( 36.895, -4.52316 )
 
-[node name="14" type="Sprite" parent="."]
+[node name="two" type="Sprite" parent="."]
 position = Vector2( -2, 10 )
 texture = ExtResource( 1 )
 offset = Vector2( 36.895, -4.52316 )
 
-[node name="7" type="Sprite" parent="."]
+[node name="three" type="Sprite" parent="."]
 position = Vector2( 150, 5.50001 )
 texture = ExtResource( 2 )
 
