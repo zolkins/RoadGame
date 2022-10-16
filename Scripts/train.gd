@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed = 900
+var speed = -1300
 var velocity = Vector2()
 
 # Автобус двигается до координаты x
@@ -17,7 +17,7 @@ func move():
 	if position.x <= -447:
 		$Timer.start(rand_range(1, 10))
 		position = Vector2(1721, 131)
-	velocity.x = -speed
+	velocity.x = speed + (rand_range(0, -500))
 
 func _physics_process(delta):
 	position += velocity * delta
