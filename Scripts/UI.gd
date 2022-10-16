@@ -2,13 +2,15 @@ extends CanvasLayer
 
 var time:int = 10;
 
+onready var score = $Control/Score.text
 
-	
-	
+
 func _ready():
 	$Control/Timer.start(1)
 	show_time()
-	
+
+func _process(delta):
+	$Control/Score.text = "Score: " + str(Global.score)
 
 func show_time() -> void:
 	var time_txt
@@ -26,14 +28,6 @@ func show_time() -> void:
 		time_txt = "Time: " + str(time)
 
 	$Control/Time.text = time_txt
-
-# Called when the node enters the scene tree for the first time.
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_Timer_timeout():

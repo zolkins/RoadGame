@@ -48,3 +48,8 @@ func _on_Bus_start():
 #        velocity = Vector2()
 #        $AnimationPlayer.play("stop")
 #        $AnimationPlayer.connect("animation_finished", self, "move")
+
+
+func _on_door_body_entered(body):
+	if body.name == "body":
+		Global.score += 1

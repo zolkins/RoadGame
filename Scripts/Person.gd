@@ -33,6 +33,7 @@ func _process(_delta):
 		_animated_sprite.play("idle_down")
 	if Global.death:
 		_animated_sprite.play("dead")
+		Global.score = 0
 		return
 	move()
 
