@@ -3,7 +3,7 @@ extends KinematicBody2D
 export (int) var speed = 200
 onready var _animated_sprite = $animated_sprite
 var velocity = Vector2()
-
+onready var lavochka
 
 # Ходьба
 func move():
@@ -23,14 +23,23 @@ func move():
 	if Input.is_action_pressed("up"):
 		_animated_sprite.play("walk_up")
 		velocity.y -= 1
-	if velocity.length() == 0:
+	if velocity.length() == 0 and lavochka == false:
 		_animated_sprite.play("idle")
 	velocity = velocity.normalized() * speed
 	move_and_slide(velocity)
 
 func _process(_delta):
+	if lavochka:
+		_animated_sprite.play("idle_down")
 	if Global.death:
 		_animated_sprite.play("dead")
 		return
 	move()
 
+
+
+func _on_lavochka_body_entered(body):
+	lavochka = true
+
+func _on_lavochka_body_exited(body):
+	lavochka = false

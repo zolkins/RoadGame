@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scripts/Person.gd" type="Script" id=1]
 [ext_resource path="res://assets/Character without weapon/walk/walk left1.png" type="Texture" id=2]
@@ -25,6 +25,10 @@
 [ext_resource path="res://assets/Character without weapon/death animation/death2.png" type="Texture" id=23]
 [ext_resource path="res://assets/Character without weapon/death animation/death4.png" type="Texture" id=24]
 [ext_resource path="res://assets/Character without weapon/death animation/death1.png" type="Texture" id=25]
+[ext_resource path="res://assets/Character without weapon/idle/idle up3.png" type="Texture" id=26]
+[ext_resource path="res://assets/Character without weapon/idle/idle up2.png" type="Texture" id=27]
+[ext_resource path="res://assets/Character without weapon/idle/idle up4.png" type="Texture" id=28]
+[ext_resource path="res://assets/Character without weapon/idle/idle up1.png" type="Texture" id=29]
 
 [sub_resource type="SpriteFrames" id=59]
 animations = [ {
@@ -36,6 +40,11 @@ animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "idle_down",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ) ],
@@ -70,8 +79,7 @@ script = ExtResource( 1 )
 position = Vector2( 6.76785, 40.6071 )
 scale = Vector2( 3.47936, 4.65538 )
 frames = SubResource( 59 )
-animation = "dead"
-frame = 3
+animation = "idle_down"
 playing = true
 
 [node name="right" type="CollisionShape2D" parent="."]
