@@ -9,7 +9,7 @@ var i = 0
 var stop
 func _ready():
 	randomize()
-	stop = rand_range(177, 1169)
+	stop = rand_range(177, 1100)
 	position = Vector2(1522, 63)
 	#pass
 

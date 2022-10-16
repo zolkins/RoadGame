@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lavochka.png-df20a122aea7c6acdc8a729e615de3c8.stex"
+path="res://.import/lavochka.png-155a6dda3ba3150ab5dd96d1b21aa17f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lavochka.png"
-dest_files=[ "res://.import/lavochka.png-df20a122aea7c6acdc8a729e615de3c8.stex" ]
+source_file="res://assets/lavochka.png"
+dest_files=[ "res://.import/lavochka.png-155a6dda3ba3150ab5dd96d1b21aa17f.stex" ]
 
 [params]
 

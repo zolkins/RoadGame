@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://train.tscn" type="PackedScene" id=1]
-[ext_resource path="res://KinematicBody2D.tscn" type="PackedScene" id=2]
-[ext_resource path="res://TileMapRoad.tscn" type="PackedScene" id=3]
-[ext_resource path="res://bus.gd" type="Script" id=4]
-[ext_resource path="res://lavochka.png" type="Texture" id=5]
-[ext_resource path="res://bus_1.tscn" type="PackedScene" id=8]
-[ext_resource path="res://car_green.tscn" type="PackedScene" id=9]
-[ext_resource path="res://car_b.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/train.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/KinematicBody2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/TileMapRoad.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/bus.gd" type="Script" id=4]
+[ext_resource path="res://assets/lavochka.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/bus_1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/car_green.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/car_b.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.3334, 120 )

@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://Person.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Person.gd" type="Script" id=1]
 [ext_resource path="res://assets/Character without weapon/walk/walk left1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Character without weapon/walk/walk right1.png" type="Texture" id=3]
 [ext_resource path="res://assets/Character without weapon/walk/walk right2.png" type="Texture" id=4]
