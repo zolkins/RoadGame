@@ -59,15 +59,19 @@ scale = Vector2( 0.055, 0.055 )
 [node name="barriers" type="YSort" parent="YSort"]
 
 [node name="car_f" parent="YSort/barriers" instance=ExtResource( 10 )]
-position = Vector2( 861, 373 )
+position = Vector2( 921, 504 )
 scale = Vector2( 0.7, 0.7 )
 collision_layer = 4
 collision_mask = 8
 
+[node name="Timer" type="Timer" parent="YSort/barriers/car_f"]
+
 [node name="car_r" parent="YSort/barriers" instance=ExtResource( 12 )]
-position = Vector2( 667, 502 )
+position = Vector2( 1357, 280 )
 collision_layer = 4
 collision_mask = 8
+
+[node name="Timer" type="Timer" parent="YSort/barriers/car_r"]
 
 [node name="train" parent="YSort/barriers" instance=ExtResource( 1 )]
 position = Vector2( 1680, 131 )
@@ -75,18 +79,29 @@ rotation = 3.14159
 scale = Vector2( 1.751, -1.83 )
 
 [node name="car_police" parent="YSort/barriers" instance=ExtResource( 7 )]
-position = Vector2( 993, 511 )
+position = Vector2( 1387, 524 )
 collision_layer = 4
 collision_mask = 8
+
+[node name="Timer" type="Timer" parent="YSort/barriers/car_police"]
 
 [node name="car_b" parent="YSort/barriers" instance=ExtResource( 11 )]
-position = Vector2( 212, 267 )
+position = Vector2( 1190, 262 )
 collision_layer = 4
 
+[node name="Timer" type="Timer" parent="YSort/barriers/car_b"]
+
 [node name="car_green" parent="YSort/barriers" instance=ExtResource( 9 )]
-position = Vector2( 431, 368 )
+position = Vector2( 1465, 363 )
 collision_layer = 4
 collision_mask = 8
+
+[node name="Timer" type="Timer" parent="YSort/barriers/car_green"]
 
 [connection signal="body_entered" from="StaticBody2D/lavochka" to="YSort/body" method="_on_lavochka_body_entered"]
 [connection signal="body_exited" from="StaticBody2D/lavochka" to="YSort/body" method="_on_lavochka_body_exited"]
+[connection signal="timeout" from="YSort/barriers/car_f/Timer" to="YSort/barriers/car_f" method="_on_Timer_timeout"]
+[connection signal="timeout" from="YSort/barriers/car_r/Timer" to="YSort/barriers/car_r" method="_on_Timer_timeout"]
+[connection signal="timeout" from="YSort/barriers/car_police/Timer" to="YSort/barriers/car_police" method="_on_Timer_timeout"]
+[connection signal="timeout" from="YSort/barriers/car_b/Timer" to="YSort/barriers/car_b" method="_on_Timer_timeout"]
+[connection signal="timeout" from="YSort/barriers/car_green/Timer" to="YSort/barriers/car_green" method="_on_Timer1_timeout"]

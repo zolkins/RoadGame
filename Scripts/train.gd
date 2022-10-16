@@ -3,9 +3,6 @@ extends KinematicBody2D
 var speed = -1300
 var velocity = Vector2()
 
-# Автобус двигается до координаты x
-var i = 0
-
 # Запуск таймера
 func _ready():
 	# Начальная позиция автобуса
