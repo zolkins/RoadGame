@@ -4,6 +4,10 @@ export (int) var speed = 200
 onready var _animated_sprite = $animated_sprite
 var velocity = Vector2()
 
+func _ready():
+	position.x = 705
+	position.y = 627
+	Global.hide = false
 
 # Ходьба
 func move():
@@ -29,6 +33,10 @@ func move():
 	move_and_slide(velocity)
 
 func _process(_delta):
+	if Global.hide:
+		position.x = -1000
+		position.y = -1000
+		return
 	if Global.lavochka:
 		_animated_sprite.play("idle_down")
 	if Global.death:
