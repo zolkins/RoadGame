@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/train.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TileMapRoad.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/bus.gd" type="Script" id=4]
 [ext_resource path="res://assets/lavochka.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/bus_1.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/car_green.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/car_b.tscn" type="PackedScene" id=11]
@@ -14,6 +15,8 @@ extents = Vector2( 18.3334, 120 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1, 1 )
+
+[node name="UI" parent="." instance=ExtResource( 6 )]
 
 [node name="back" parent="." instance=ExtResource( 3 )]
 position = Vector2( -2, -56 )
