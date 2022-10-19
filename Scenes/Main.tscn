@@ -18,7 +18,7 @@ extents = Vector2( 18.3334, 120 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 58.3334, 135 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 position = Vector2( -1, 1 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
@@ -59,7 +59,7 @@ scale = Vector2( 0.055, 0.055 )
 [node name="barriers" type="YSort" parent="YSort"]
 
 [node name="car_f" parent="YSort/barriers" instance=ExtResource( 10 )]
-position = Vector2( 921, 504 )
+position = Vector2( 1912, 504 )
 scale = Vector2( 0.7, 0.7 )
 collision_layer = 4
 collision_mask = 8
@@ -79,7 +79,7 @@ rotation = 3.14159
 scale = Vector2( 1.751, -1.83 )
 
 [node name="car_police" parent="YSort/barriers" instance=ExtResource( 7 )]
-position = Vector2( 1387, 524 )
+position = Vector2( 1375, 539 )
 collision_layer = 4
 collision_mask = 8
 

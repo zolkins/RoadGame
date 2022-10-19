@@ -34,6 +34,7 @@ func move():
 
 func _process(_delta):
 	if Global.hide:
+		Global.death = false
 		position.x = -1000
 		position.y = -1000
 		return

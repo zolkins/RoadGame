@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
 [ext_resource path="res://Used textures/font/ThaleahFat.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://assets/coat-of-arms.png" type="Texture" id=3]
-[ext_resource path="res://assets/ukraine.png" type="Texture" id=4]
+[ext_resource path="res://Used textures/coat-of-arms.png" type="Texture" id=3]
+[ext_resource path="res://Used textures/ukraine.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30

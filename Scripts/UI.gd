@@ -31,6 +31,8 @@ func show_time() -> void:
 
 
 func _on_Timer_timeout():
+	if Global.hide:
+		return
 	if time == 0 or Global.death == true:
 		Global.death = true
 		yield(get_tree().create_timer(3.0), "timeout")
