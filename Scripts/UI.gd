@@ -8,6 +8,7 @@ func _ready():
 	show_time()
 
 func _process(delta):
+	$best/best1.text = "Best score: " + str(Global.h_score)
 	$Control/Score.text = "Score: " + str(Global.score)
 	if Global.lavochka:
 		$Control/Timer.start(1)

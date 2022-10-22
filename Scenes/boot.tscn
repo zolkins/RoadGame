@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/boot.gd" type="Script" id=1]
 [ext_resource path="res://Used textures/font/ThaleahFat.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Used textures/dark_slow.png" type="Texture" id=4]
 [ext_resource path="res://Used textures/dark.png" type="Texture" id=5]
 [ext_resource path="res://Used textures/modern-city-assets/bus_close.png" type="Texture" id=6]
+[ext_resource path="res://assets/sfx/8Bit DNA Loop.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sfx/African4.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 279
@@ -102,4 +104,8 @@ texture = ExtResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
 
-[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="bus" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )

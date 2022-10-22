@@ -50,7 +50,7 @@ shape = SubResource( 2 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="body" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 705, 627 )
+position = Vector2( 709, 671 )
 
 [node name="bus" parent="YSort" instance=ExtResource( 8 )]
 position = Vector2( 1553, 63 )

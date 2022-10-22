@@ -4,10 +4,11 @@ onready var death = false
 onready var score = 0
 onready var hide = false
 onready var lavochka:bool
+onready var h_score:int
 
-	
-func _ready():
-	pass 
+func _process(delta):
+	if score >= h_score:
+		h_score = score
 
 func scene(target: String) -> void:
 	#$Control/AnimationScene.play("Open")

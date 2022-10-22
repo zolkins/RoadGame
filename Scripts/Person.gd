@@ -3,10 +3,11 @@ extends KinematicBody2D
 export (int) var speed = 200
 onready var _animated_sprite = $animated_sprite
 var velocity = Vector2()
+var walk:bool
 
 func _ready():
-	position.x = 705
-	position.y = 627
+	position.x = 709
+	position.y = 671
 	Global.hide = false
 
 # Ходьба
@@ -33,6 +34,15 @@ func move():
 	move_and_slide(velocity)
 
 func _process(_delta):
+	if velocity.x != 0 or velocity.y != 0:
+		walk = true
+	else:
+		walk = false
+	if walk and !Global.death:
+		if !$AudioStreamPlayer.is_playing():
+			$AudioStreamPlayer.play()
+	else:
+		$AudioStreamPlayer.stop()
 	if Global.hide:
 		Global.death = false
 		position.x = -1000
