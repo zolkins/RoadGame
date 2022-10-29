@@ -22,6 +22,7 @@ func _ready() -> void:
 func _input(event):
 	if end:
 		if event is InputEventKey and event.pressed or Input.is_mouse_button_pressed(true):
+			end = false
 			$sfx.volume_db = -20
 			$bus.play()
 			$Tween.interpolate_property($DarkSlow_RG, "position", $DarkSlow_RG.position, Vector2(-173, 261), 2.6, Tween.TRANS_SINE, Tween.EASE_OUT)
