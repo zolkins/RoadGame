@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var death = false
+onready var death:b = false
 onready var score = 0
 onready var hide = false
 onready var lavochka:bool
