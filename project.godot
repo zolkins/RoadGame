@@ -12,7 +12,8 @@ config_version=4
 
 config/name="RoadGame"
 run/main_scene="res://Scenes/boot.tscn"
-boot_splash/image="res://Used textures/coat-of-arms.png"
+boot_splash/image="res://Used textures/Ukraine Logo.png"
+boot_splash/fullsize=false
 
 [autoload]
 
