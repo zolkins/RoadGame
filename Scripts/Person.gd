@@ -34,6 +34,10 @@ func move():
 	move_and_slide(velocity)
 
 func _process(_delta):
+	if Global.hide:
+		$AudioStreamPlayer.volume_db = -1000
+	else: 
+		$AudioStreamPlayer.volume_db = -20
 	if velocity.x != 0 or velocity.y != 0:
 		walk = true
 	else:
