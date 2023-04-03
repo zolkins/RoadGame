@@ -6,14 +6,17 @@
 
 ## 🤔 What is the purpose of this repository?
 
-**🚦🏃‍♂️⏱️
-*This repository contains a game where the goal is to cross a road in 10 seconds.*** 
+🚦🏃‍♂️⏱️
+
+***- This repository contains a game where the goal is to cross a road in 10 seconds.*** 
 
 🚗💥🚂
-***However, players must be careful as they can be hit by a car at any moment, and if not, a train will do the job!*** 
+
+***- However, players must be careful as they can be hit by a car at any moment, and if not, a train will do the job!*** 
 
 😵🔄⌛
-***The twist is that players are stuck in a time loop, where they must overcome the same road over and over again.***
+
+***- The twist is that players are stuck in a time loop, where they must overcome the same road over and over again.***
 
 ##  Player controls
 
