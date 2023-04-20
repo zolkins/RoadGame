@@ -1,8 +1,10 @@
 # RoadGame
-![Ludum Dare 51](https://static.jam.host/raw/f84/a4/z/5347c.png)
+[![Ludum Dare 51](https://static.jam.host/raw/f84/a4/z/5347c.png)](https://ldjam.com/events/ludum-dare/51/roadgame)
 
 # Jam Theme: *Every 10 seconds*
 ![itch.io](https://itch.io/favicon.ico) [**Play on itch.io**](https://zolkins.itch.io/road-game)
+
+![ldjam.com](https://ldjam.com/favicon.ico) [**Rate on ldjam**](https://ldjam.com/events/ludum-dare/51/roadgame)
 
 ## 🤔 What is the purpose of this repository?
 
