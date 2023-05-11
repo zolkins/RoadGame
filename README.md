@@ -53,7 +53,7 @@
 
 ## 👨‍💻 Author
 >- ### 👤 [@zolkins](https://github.com/zolkins)
->![av_zolk](https://avatars.githubusercontent.com/u/57059372)
+>[![av_zolk](https://avatars.githubusercontent.com/u/57059372)](https://github.com/zolkins)
 
 ##  🤝 Contributing
 Contributions, issues and feature requests are welcome!
